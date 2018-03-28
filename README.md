@@ -4,7 +4,7 @@
 
 ## 当前 Lab
 
-[Lab03](./requirement/Lab03.png)
+[Lab03](/requirements/Lab03.png)
 
 ## 往期 Lab
 
