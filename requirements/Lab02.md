@@ -38,13 +38,7 @@
 
 ## 提交
 
-请将相应文件压缩后上传，相应压缩文件名为 `学号_姓名.zip` 或 `学号_姓名.rar`
-
-文件夹结构如下：
-
-* `[YourStudentID_YourName]` //the parent directory
-    * `images` images folder
-    * `Lab02.html` the final html
+请直接将你的代码目录 push 到 GitHub，无需压缩成 zip 或 rar
 
 ## 截止日期
 
