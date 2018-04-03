@@ -1,0 +1,141 @@
+body{
+  min-width: 600pt;
+  font-family: sans-serif serif;
+  background-color: #E8EAF6;
+  padding-left: 5%;
+  padding-right: 5%;
+  /*至少600px怎么写啊*/
+}
+
+h1{
+  font-size: 1.5em;
+  text-transform: capitalize;
+}
+
+h2{
+  text-transform: uppercase;
+  color: white;
+  background-color: #7986CB;
+  padding: 1em;
+}
+
+header{
+  color: white;
+  background-color: #1A237A;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-bottom: 1em;
+}
+
+header > p{
+  font-style: italic;
+}
+
+
+hr{
+  color: #C5CAE9;
+  margin: 0.5em 1em 0 1em;
+}
+
+footer{
+  background-color: #1A237E;
+  padding: 1.3em 1em;
+  color: white;
+}
+
+nav{
+  background: #3F51B5;
+  color: #00B0FF;
+  padding-top: 0.4em;
+  padding-left: 0.7em;
+  padding-bottom: 0.4em;
+  margin-bottom: 0.5em;
+}
+
+/* nav > a{
+  padding: 0.3em;
+} */
+
+a{
+  color: #00B0FF;
+  padding: 0.3em;
+}
+
+a:link:hover{
+  color: white;
+  background-color: #F50057;
+  padding: 0.3em;
+}
+
+.subheader{
+  font-family: "Times New Roman";
+}
+
+.subcolor{
+  color: #7990A3;
+}
+
+.form{
+  padding-top: 0.5em;
+  padding-left: 1em;
+}
+
+.date{
+  color: #F5A2C1;
+}
+
+.bottom-space{
+  padding-bottom: 0.8em;
+}
+
+.RelatedPhotos{
+  margin-top: 0.5em;
+}
+
+.footerspace{
+  margin-top: 0.6em;
+}
+
+.frame{
+  border-style: none solid solid solid;
+  border-color: #C5CAE9;
+  border-width: 1px;
+}
+
+.photo-show{
+  border="2";
+}
+
+#conservatory{
+  padding: 0.5em 1em;
+  background-color: #C5CAE9;
+}
+
+#maincontent {
+  background-color: white;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+#center-image {
+  width: 100%;
+}
+
+#image-group{
+  text-align: right;
+  padding-top: 1em;
+  padding-right: 1em;
+  padding-left: 1em;
+  padding-bottom: 0.3em;
+}
+#image-group2{
+  /* font-size: 0; */
+  margin-bottom: -0.2em;
+}
+
+#ThisPhoto{
+  padding-top: 0.5em;
+  padding-right: 1em;
+  padding-bottom: 0em;
+  padding-left: 1em;
+}
