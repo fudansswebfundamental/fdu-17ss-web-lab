@@ -1,0 +1,144 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+/* general text formatting */
+
+h1,
+h2,
+h3,
+nav,
+footer {
+  font-family: Lobster, Cambria, "Times New Roman", serif;
+}
+
+body {
+  font-family: "Open Sans", Verdana, Arial, sans-serif;
+  font-size: 100%;
+  background-color: #E8EAF6;
+}
+
+/* header and navigation */
+
+header,
+footer {
+  color: white;
+  background-color: #1A237E;
+  margin: 0em 4em 0.25em 4em;
+}
+
+header h1 {
+  padding: 0.5rem 0 0 1.25rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+header p {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  padding: 0 0 0 1.25rem;
+}
+
+/* main article styling */
+
+main {
+  background-color: white;
+  margin: 1em 4em 1em 4em;
+  padding: 1em;
+}
+
+section {
+  margin-bottom: 1em;
+  padding: 0;
+  width: 100%;
+}
+
+legend {
+  font-size: 1.35rem;
+  background-color: #7986CB;
+  height: 1.70rem;
+  color: #E8EAF6;
+  text-transform: uppercase;
+  width: 100%;
+  margin: 0;
+  padding: 5px 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  background-color: #C5CAE9;
+  width: 100%;
+  border: none;
+}
+
+form p {
+  margin-top: 0.5em;
+}
+
+table {
+  border: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+table tbody td {
+  /* border: 1pt solid #95BEF0;   */
+  line-height: 1.5em;
+  vertical-align: top;
+  padding: 0.5em 0.75em;
+}
+
+input[type=text],
+input[type=date],
+input[type=time],
+input[type=number],
+input[type=color] {
+  height: 1.75em;
+}
+
+select {
+  height: 2em;
+}
+
+input[name=title] {
+  width: 100%;
+}
+
+input[name=city],
+select {
+  width: 75%;
+}
+
+textarea {
+  width: 100%;
+}
+
+.box {
+  border: 1pt solid #9FA8DA;
+  padding: 0.5em;
+  margin-bottom: 0.4em;
+}
+
+.rectangle {
+  background-color: #9FA8DA;
+  padding: 0.5em;
+}
+
+.rounded {
+  border: none;
+  border-radius: 7px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background-color: #E91E63;
+  padding: 0.5em 0 0.5em 0;
+  margin: 0.3em;
+  width: 7em;
+  height: 3em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.rounded:hover {
+  background-color: #FF4081;
+}
