@@ -13,7 +13,88 @@
 </header>
 <main>
    <section>
-   
+       <form method="post" action="http://www.randyconnolly.com/tests/process.php">
+           <fieldset>
+               <legend>
+                photo details
+               </legend>
+               <table>
+                    <tbody>
+                   <tr >
+                       <td  colspan="2">
+                           Title<br/>
+
+                           <input type="text" placeholder="Give your photo a descriptive name" name="title"><br/>
+
+                           Description<br/>
+
+                           <textarea placeholder="Adding a rich description will help with search results" rows="5" cols="10" ></textarea>
+                       </td>
+                   </tr>
+
+                   <tr >
+                       <td >
+                            Continent<br/>
+                           <select name="continent" >
+                               <option>Choose continent</option>
+                               <option>Asia</option>
+                           </select><br/>
+                           Country<br/>
+                           <select name="Country" >
+                               <option>Choose country</option>
+                               <option>China</option>
+                           </select><br/>
+                           City<br/>
+                           <input type="text" name="city">
+
+                       </td>
+                       <td >
+                           <div class="box" >
+                           Copyright?<br/>
+                           <input type="radio" value="All rights reserved">All rights reserved<br/>
+                           <input type="radio" value="Creative Commons" checked="checked">Creative Commons<br/>
+                           </div>
+
+                           <div class="box"  >
+                           Creative Commons Types<br/>
+                           <input type="checkbox" value="Attribution">Attribution<br/>
+                           <input type="checkbox" value="Noncommercial">Noncommercial<br/>
+                           <input type="checkbox" value="No Derivative Works">No Derivative Works<br/>
+                           </div>
+                       </td>
+                   </tr>
+                   <tr >
+                       <td  colspan="2" class="rectangle">
+                           I accept the software license<input type="checkbox" >
+                       </td>
+                   </tr>
+                   <tr >
+                       <td >
+                           Rate this photo:<br/>
+                           <input type="number"><br/>
+                           Color Collection<br/>
+                           <input type="color">
+                       </td>
+                       <td>
+                           <div class="box">
+                           Date Taken:<br/>
+                           <input type="date"><br/>
+                           Time Taken:<br/>
+                           <input type="time">
+                           </div>
+                       </td>
+                   </tr>
+                   <tr >
+                       <td colspan="2" id="buttons" class="rectangle">
+                           <input id="button1" type="button" value="提交" class="rounded">
+                           <input id="button2" type="button" value="Clear Form" class="rounded">
+                       </td>
+                   </tr>
+                    </tbody>
+               </table>
+           </fieldset>
+       </form>
+       
    </section>
 </main>  
 

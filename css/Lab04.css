@@ -69,4 +69,96 @@ form p {
    margin-top: 0.5em;
 }
 
+/*新增加的
+  4.5没用了哭哭*/
+/*.longwhite{*/
+    /*width:98%;*/
+/*}*/
+/*.halfwhite{*/
+    /*width:98%;*/
+/*}*/
 
+/*.smallertable{*/
+    /*border:1px solid black;*/
+/*}*/
+
+/*table{*/
+    /*!*margin:0.5em;*!*/
+    /*width:100%;*/
+
+/*}*/
+
+/*#license,#buttons{*/
+   /*background-color: #7986CB;*/
+/*}*/
+
+
+/*4.5助教新增加的
+啊啊啊啊啊为什么我没有早点看到啊哭泣哭泣哭泣哭泣*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+table tbody tr td {
+    /* border: 1pt solid #95BEF0;   */
+    line-height: 1.5em;
+    vertical-align: top;
+    padding: 0.5em 0.75em;
+}
+
+input[type=text],
+input[type=date],
+input[type=time],
+input[type=number],
+input[type=color] {
+    height: 1.75em;
+}
+
+select {
+    height: 2em;
+}
+
+input[name=title] {
+    width: 100%;
+}
+
+input[name=city],
+select {
+    width: 75%;
+}
+
+textarea {
+    width: 100%;
+}
+
+.box {
+    border: 1pt solid #9FA8DA;
+    padding: 0.5em;
+    margin-bottom: 0.4em;
+}
+
+.rectangle {
+    background-color: #9FA8DA;
+    padding: 0.5em;
+}
+
+.rounded {
+    border: none;
+    border-radius: 7px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background-color: #E91E63;
+    padding: 0.5em 0 0.5em 0;
+    margin: 0.3em;
+    width: 7em;
+    height: 3em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+
+.rounded:hover {
+    background-color: #FF4081;
+}
