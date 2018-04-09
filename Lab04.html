@@ -13,9 +13,79 @@
 </header>
 <main>
    <section>
-   
+   <form action="http://www.randyconnolly.com/tests/process.php" method="post">
+     <fieldset>
+       <legend>PHOTO DETAILS
+       </legend>
+       <table>
+         <tbody>
+         <tr>
+           <td colspan="2">
+             <p>Title</p>
+             <input type="text" name="title" value="Give your photo a descriptive name">
+             <p>Description</p>
+             <textarea name="">Adding a rich description will help search results</textarea>
+       </td>
+         </tr>
+         <tr>
+           <td>
+           <p>Continent</p>
+           <select class="" name="">
+             <option value ="">Choose continent</option>
+           </select>
+           <p>Contry</p>
+           <select class="" name="">
+             <option value ="">Choose contry</option>
+           </select>
+           <p>City</p>
+           <input type="text" name="city">
+         </td>
+         <td>
+           <div class="box">
+             <p>Copyright</p>
+             <input type="radio" name="Copyright" checked="checked" value="" >All rights reserved<br>
+             <input type="radio" name="Copyright" value="" >Creative commons
+           </div>
+           <div class="box">
+             <p>Creat commons types</p>
+             <input type="checkbox" name="type" value="Attribution" >Attribution<br>
+             <input type="checkbox" name="type" value="Noncommercial" >Noncommercial<br>
+             <input type="checkbox" name="type" value="No Derivative Works" >No Derivative Works
+           </div>
+         </td>
+         </tr>
+         <tr>
+           <td colspan="2"><div class="rectangle">I accept the software liscence<input type="checkbox" name="" value="" ></div></td>
+         </tr>
+         <tr>
+           <td>
+             <p>Rate this photo:</p>
+             <input type="number" name="points" min="1" max="10">
+             <p>Color Collection:</p>
+             <input type="color" name="color" value="" >
+           </td>
+           <td>
+             <div class="box">
+               <p>Date Taken</p>
+               <input type="date" name="date" value="" >
+               <p>Time Taken</p>
+               <input type="time" name="date" value="" >
+             </div>
+           </td>
+         </tr>
+         <tr>
+           <td colspan="2">
+             <div class="rectangle">
+               <input type="submit" value="Submit" class="rounded"><input type="reset" value="Clear Form" class="rounded">
+             </div>
+           </td>
+         </tr>
+         </tbody>
+       </table>
+     </fieldset>
+   </form>
    </section>
-</main>  
+</main>
 
 
 </body>
