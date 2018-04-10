@@ -14,7 +14,7 @@
 
 提供参考的最终效果图如下：
 
-![效果截图](./screenshots/lab4.png)
+![![效果截图](file:///C:/Users/Admin/Desktop/fdu-17ss-web-lab/requirements/screenshots/lab4.png?lastModify=1523277506)](./screenshots/lab4.png)
 
 ## 参考
 

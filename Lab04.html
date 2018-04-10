@@ -1,22 +1,154 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 <html lang="en">
-<head >
-   <meta charset="utf-8">
-   <title>Lab 04</title>
-   <link rel="stylesheet" href="./css/reset.css" />
-   <link rel="stylesheet" href="./css/Lab04.css" />
-</head>
-<body>
-<header>
-     <h1>Share Your Travels</h1>
-     <p>let us know where you've been</p>
-</header>
-<main>
-   <section>
-   
-   </section>
-</main>  
+  <head>
+    <meta charset="UTF-8">
+    <title>Lab04</title>
+       <link rel="stylesheet" href="./css/Lab04.css" />
 
+  </head>
 
-</body>
+  <body>
+    <header>
+      <h1><em>Share Your Travels</em></h1>
+      <p>let us know where you've been</p>
+    </header>
+
+    <main>
+      <form>
+        <fieldset>
+          <legend>photo details</legend>
+          <table>
+          <tbody>
+
+            <tr>
+            <td  colspan="2">
+
+              <p>Title
+              <br />
+              <input type="text" name="title" value="Give your photo a descriptive name">
+              </p>
+              <p>Description
+                <textarea cols="40" rows="5">Adding a rich descriptive will help with search results
+                </textarea>
+              </p>
+              </td>
+            </tr>
+
+            <tr>
+            <td>
+              <p>Continent
+              <br />
+              <select>
+                <option value="Choose a continent">Choose a continent</option>
+                <option value="亚洲">亚洲</option>
+                <option value="欧洲">欧洲</option>
+                <option value="北美洲">北美洲</option>
+                <option value="南美洲">南美洲</option>
+                <option value="南极洲">南极洲</option>
+                <option value="非洲">非洲</option>
+                <option value="大洋洲">大洋洲</option>
+              </select>
+              </p>
+
+              <p>Country
+              <br />
+              <select>
+                <option value="Choose country">Choose country</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              </p>
+
+              <p>City
+              <br />
+              <input type="text" name="city" value="" >
+              </p>
+            </td>
+
+            <td>
+            <div class="box">
+              <label>Copyright?</label>
+              <br />
+              <input type="radio" value="1"  name="copyright" />
+              <label>All rights reserved</label>
+              <br />
+              <input type="radio" value="2"  name="copyright" checked="checked" />
+              <label>Creative Commons</label>
+            </div>
+
+            <div class="box">
+              <label>Creative Commons Types</label>
+              <br />
+              <input type="checkbox" value="3"  name="Attribution" />
+              <label>Attribution</label>
+              <br />
+              <input type="checkbox" value="4"  name="Noncommercial" />
+              <label>Noncommercial</label>
+              <br />
+              <input type="checkbox" value="5"  name="" />
+              <label>No Derivative Works</label>
+            </div>
+            </td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+                <div class="rectangle">
+                <p>
+                  I accept the software license
+                  <input type="checkbox" value="6"  name="" />
+                </p>
+              </div>
+              </td>
+            </tr>
+
+            <tr>
+            <td>
+              <p>
+                Rate this photo:
+                <br />
+                <input type="number" />
+              </p>
+              <p>
+                Color Collection:
+                <br />
+                <input type="color" />
+              </p>
+            </td>
+
+            <td>
+            <div class="box">
+            <p>
+              Date Taken:
+              <br />
+              <input type="date" name="" value="" />
+            </p>
+            <p>
+              Time Taken:
+              <br />
+              <input type="time" name="" value="" />
+            </p>
+            </div>
+            </td>
+            </tr>
+
+            <tr>
+              <td colspan="2">
+              <div class="rectangle">
+              <input type="button" class="rounded" value="submit" />
+              <input type="button" class="rounded" value="clear forms" />
+            </div>
+              </td>
+            </tr>
+            </tbody>
+
+          </table>
+        </fieldset>
+
+      </form>
+    </main>
+  </body>
 </html>

@@ -4,7 +4,6 @@ body{
   background-color: #E8EAF6;
   padding-left: 5%;
   padding-right: 5%;
-  /*至少600px怎么写啊*/
 }
 
 h1{
@@ -51,10 +50,6 @@ nav{
   padding-bottom: 0.4em;
   margin-bottom: 0.5em;
 }
-
-/* nav > a{
-  padding: 0.3em;
-} */
 
 a{
   color: #00B0FF;
