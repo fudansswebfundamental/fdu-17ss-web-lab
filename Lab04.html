@@ -1,103 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head >
-   <meta charset="utf-8">
-   <title>Lab 04</title>
-   <link rel="stylesheet" href="./css/reset.css" />
-   <link rel="stylesheet" href="./css/Lab04.css" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Lab 05</title>
+     <!--下面是lab04的css lab5不用的-->
+   <!--<link rel="stylesheet" href="./css/reset.css" />-->
+   <!--<link rel="stylesheet" href="./css/Lab04.css" />-->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-<header>
-     <h1>Share Your Travels</h1>
-     <p>let us know where you've been</p>
-</header>
-<main>
-   <section>
-       <form method="post" action="http://www.randyconnolly.com/tests/process.php">
-           <fieldset>
+
+<div class="container">
+  <div class="row clearfix">
+    <header class="col-md-4 column">
+     <h1 class="text-center">Share Your Travels</h1>
+     <p class="text-center">let us know where you've been</p>
+    </header>
+<div class="col-md-8 column">
+    <nav role="navigation">
+    <ul class="nav nav-justified">
+        <li class="nav-item m-3"><a class="nav-link text-secondary" href="lab02.html">Gallery</a></li>
+        <li class="nav-item m-3"><a class="nav-link text-secondary" href="#">Feeling Lucky</a></li>
+        <li class="nav-item m-3"><a class="nav-link text-secondary" href="#">User</a></li>
+    </ul>
+    </nav>
+</div>
+
+  </div>
+    <div class="row clearfix">
+                <div class="col-md-12 column border rounded">
+       <form role="form" method="post" action="http://www.randyconnolly.com/tests/process.php">
                <legend>
                 photo details
                </legend>
-               <table>
-                    <tbody>
-                   <tr >
-                       <td  colspan="2">
-                           Title<br/>
-
-                           <input type="text" placeholder="Give your photo a descriptive name" name="title"><br/>
-
-                           Description<br/>
-
-                           <textarea placeholder="Adding a rich description will help with search results" rows="5" cols="10" ></textarea>
-                       </td>
-                   </tr>
-
-                   <tr >
-                       <td >
-                            Continent<br/>
-                           <select name="continent" >
-                               <option>Choose continent</option>
-                               <option>Asia</option>
-                           </select><br/>
-                           Country<br/>
-                           <select name="Country" >
-                               <option>Choose country</option>
-                               <option>China</option>
-                           </select><br/>
-                           City<br/>
-                           <input type="text" name="city">
-
-                       </td>
-                       <td >
-                           <div class="box" >
-                           Copyright?<br/>
-                           <input type="radio" value="All rights reserved">All rights reserved<br/>
-                           <input type="radio" value="Creative Commons" checked="checked">Creative Commons<br/>
+                           <div class="form-gruop">
+                           <label for="title">Title</label>
+                           <input type="text" class="form-control" id="title" placeholder="Give your photo a descriptive name"><br/>
                            </div>
 
-                           <div class="box"  >
-                           Creative Commons Types<br/>
-                           <input type="checkbox" value="Attribution">Attribution<br/>
-                           <input type="checkbox" value="Noncommercial">Noncommercial<br/>
-                           <input type="checkbox" value="No Derivative Works">No Derivative Works<br/>
+                           <div class="form-group">
+                           <label > Description</label>
+                           <textarea  class="form-control" placeholder="Adding a rich description will help with search results"  ></textarea>
                            </div>
-                       </td>
-                   </tr>
-                   <tr >
-                       <td  colspan="2" class="rectangle">
-                           I accept the software license<input type="checkbox" >
-                       </td>
-                   </tr>
-                   <tr >
-                       <td >
-                           Rate this photo:<br/>
-                           <input type="number"><br/>
-                           Color Collection<br/>
-                           <input type="color">
-                       </td>
-                       <td>
-                           <div class="box">
-                           Date Taken:<br/>
-                           <input type="date"><br/>
-                           Time Taken:<br/>
-                           <input type="time">
+
+                           <div class="form-gruop">
+                               <label>Continent</label>
+                               <select name="continent" class="form-control">
+                                   <option>Choose continent</option>
+                                   <option>Asia</option>
+                               </select>
                            </div>
-                       </td>
-                   </tr>
-                   <tr >
-                       <td colspan="2" id="buttons" class="rectangle">
-                           <input id="button1" type="button" value="提交" class="rounded">
-                           <input id="button2" type="button" value="Clear Form" class="rounded">
-                       </td>
-                   </tr>
-                    </tbody>
-               </table>
-           </fieldset>
+
+                           <div class="form-group my-3">
+                               <label>Country</label>
+                               <select name="Country" class="form-control">
+                                   <option>Choose country</option>
+                                   <option>China</option>
+                               </select>
+                      </div>
+                           <div class="form-gruop">
+                           <label>City</label>
+                           <input type="text" name="city" class="form-control">
+                           </div>
+
+
+                         <div class="form-gruop my-3">
+                            <label >Copyright?</label>
+                            <div class="form-check px-1">
+                          <label class="form-check-label" ><input type="radio" class="form-check-label">All rights reserved</label>
+                           </div>
+                            <div class="form-check px-1">
+                                <label class="form-check-label" ><input type="radio" checked="checked" class="form-check-label">Creative Commons</label>
+                            </div>
+                             </div>
+
+
+
+
+                               <label>Creative Commons Types</label>
+                               <div class="form-check px-1">
+                               <label class="form-check-label">
+                                <input type="checkbox" class="form-check-label">Attribution</label>
+                               <label class="form-check-label">
+                           <input type="checkbox"class="form-check-label">Noncommercial</label>
+                               <label class="form-check-label">
+                           <input type="checkbox"  class="form-check-label">No Derivative Works</label>
+                               </div>
+
+
+
+
+
+                           <div class="checkbox px-1 my-4">
+                            <label>
+                           <input type="checkbox" >I accept the software license
+                            </label>
+                           </div>
+
+
+
+<div class="row my-3">
+
+                           <div class="form-gruop col-md-6 column">
+                               <label>Rate this photo:</label>
+                           <input type="number" class="form-control">
+                           </div>
+
+                       <div class="form-gruop col-md-6 column">
+                               <label>Color Collection</label>
+                           <input type="color" class="form-control">
+                       </div>
+</div>
+
+           <div class="row my-3">
+
+                           <div class="form-gruop col-md-6 column">
+                               <label>Date Taken:</label>
+                           <input type="date" class="form-control">
+                           </div>
+
+                           <div class="form-gruop col-md-6 column">
+                               <label>Time Taken:</label>
+                           <input type="time" class="form-control">
+                           </div>
+           </div>
+
+                           <div class="form-gruop my-3">
+                           <input id="button1" type="button" value="提交" class="btn btn-secondary" >
+                           <input id="button2" type="button" value="Clear Form" class="btn btn-secondary" >
+                           </div>
        </form>
-       
-   </section>
-</main>  
+                </div>
 
-
+        </div>
+</div>
+<script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
