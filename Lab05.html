@@ -1,0 +1,155 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>lab05.html</title>
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+  <div class="container">
+        <header class="row">
+            <div class="col-md-6">
+                <h1 class="text-center">share your travels</h1>
+                <p class="text-center"><em>Let us know where you've been</em></p>
+            </div>
+
+
+                <nav  class="col-md-6">
+                    <a href="Lab04.html">
+                        <button type="button" class="btn btn-link col-md-4 float-left">Upload</button>
+                    </a>
+                    <a href="#">
+                        <button type="button" class="btn btn-link col-md-4">Related Photos</button>
+                    </a>
+                    <a href="#">
+                        <button type="button" class="btn btn-link col-md-4 float-right">Reviews</button>
+                    </a>
+
+                <!--<ul class="nav nav-justified">-->
+                    <!--<li class="col-md-3 active">-->
+                        <!--<a class="nav-link" href="Lab04.html">Upload</a>-->
+                    <!--</li>-->
+                    <!--<li class="col-md-3">-->
+                        <!--<a class="nav-link" href="#">Related Photos</a>-->
+                    <!--</li>-->
+                    <!--<li class="col-md-3">-->
+                        <!--<a class="nav-link" href="#">Reviews</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            </nav>
+
+        </header>
+
+        <main>
+            <div class="row">
+                <div class="col-lg-9 col-md-9">
+                    <div class="card">
+                        <section class="card-body">
+                            <h3>New York - Central Park</h3>
+                            <p>Conservatory Pond in Central Park
+                            </p>
+                            <a href="001.html" target="_blanck">
+                            <img href="images/central-park.jpg" class="mx-auto d-block w-100" src="images/central-park.jpg" alt="central-park">
+                            </a>
+                                <p>This photo of Conservatory Pond in <a href="#">
+                                <strong>Central Park</strong></a> in <a href="#"><strong>New York City</strong></a>
+                                was taken on <time>October 22, 2016</time> with a Canon EOS 30D camera.
+                            </p>
+
+                            <p class="text-right">
+                                <img src="images/icon_download.png">
+                                <img src="images/icon_mail.png">
+                                <img src="images/icon_map.png">
+                                <img src="images/icon_up.png">
+                                <img src="images/icon_down.png">
+                            </p>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3">
+                    <div class="card">
+                        <section class="card-body">
+                            <h3>Related Photos</h3>
+                            <div id="demo" class="carousel slide" data-ride="carousel">
+                                <!-- 指示符 -->
+                                <ul class="carousel-indicators">
+                                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                    <li data-target="#demo" data-slide-to="1"></li>
+                                    <li data-target="#demo" data-slide-to="2"></li>
+                                </ul>
+                                <!-- 轮播图片 -->
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <a href="002.html" target="_blanck">
+                                        <img src="images/related-square1.jpg" class="mx-auto d-block w-100">
+                                        </a>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <a href="003.html" target="_blanck">
+                                        <img src="images/related-square2.jpg" class="mx-auto d-block w-100">
+                                        </a>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <a href="004.html" target="_blanck">
+                                        <img src="images/related-square3.jpg" class="mx-auto d-block w-100">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- 左右切换按钮 -->
+                                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </a>
+                                <a class="carousel-control-next" href="#demo" data-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="card">
+                        <section class="card-body">
+                            <h3>Reviews</h3>
+                            <div id="accordion">
+                                <div class="text-center">
+                                    <em>Ricardo</em>
+                                </div>
+                                <p class="text-center"><span class="badge badge-info"  data-toggle="collapse" href="#collapseOne"><date>2016-05-23</date></span></p>
+                                <div id="collapseOne" class="collapse text-center">
+                                    Easy on the HDR buddy.
+                                </div>
+                                <hr>
+                                <div class="text-center">
+                                    <em>Susan</em>
+                                </div>
+                                <p class="text-center"><span class="badge badge-info"  data-toggle="collapse" href="#collapseTwo"><date>2016-11-18</date></span></p>
+                                <div id="collapseTwo" class="collapse text-center">
+                                    I love Central Park.
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+      <div class="row">
+          <button type="button" class="btn btn-link col-md-4 float-right">Home</button>
+          <button type="button" class="btn btn-link col-md-4">Browse</button>
+          <button type="button" class="btn btn-link col-md-4 float-left">Search</button>
+      </div>
+
+        <footer class="text-center">
+            <p>Copyright &copy; 2017 Share Your Travels</p>
+        </footer>
+    </div>
+    <!-- JS -->
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
