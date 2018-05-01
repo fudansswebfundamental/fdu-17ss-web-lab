@@ -17,7 +17,7 @@
 ## 参考
 
 1. Fundamentals of Web Development. Chapter 8.
-2. [Javascript](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
+2. [Javascript MDN web docs](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
 
 ## 测试
 
