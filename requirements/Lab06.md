@@ -7,8 +7,9 @@
 ## 要求
 
 1. 本次 lab 不要求 css 和 html 的编写，我们已经提供了除 js 文件外的其它所有文件，但你可以根据你的需要决定是否修改这些文件
-2. 我们已经在 `js/data.js` 中提供了本次 lab 所有的必需数据，请直接使用
-3. 如无必要，请全部使用 `const` \\ `let` 声明变量 && 具体原因建议阅读 [Understanding ECMAScript 6 - 01-Block-Bindings](https://github.com/nzakas/understandinges6/blob/master/manuscript/01-Block-Bindings.md)
+2. 禁止使用直接编写 html 的方式完成本 lab，`<div class="flex-container justify" ></div>` 内的内容必须由 js 代码动态生成 
+3. 我们已经在 `js/data.js` 中提供了本次 lab 所有的必需数据，请直接使用
+4. 如无必要，请全部使用 `const` \\ `let` 声明变量 && 具体原因建议阅读 [Understanding ECMAScript 6 - 01-Block-Bindings](https://github.com/nzakas/understandinges6/blob/master/manuscript/01-Block-Bindings.md)
 
 提供参考的最终效果图如下：
 
@@ -21,7 +22,7 @@
 
 ## 测试
 
-本次 Lab 没有唯一答案，只要求最后效果与效果图类似，并在 Lab 中使用了
+本次 Lab 没有唯一答案，只要求最后效果与效果图类似即可
 
 ## 素材
 
