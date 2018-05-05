@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LAB05</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+<nav class="navbar navbar-expand-sm bg-white navbar-light">
+  <!-- Brand/logo -->
+  <div class="navbar-brand text-center">
+      <h1>Share Your Travels</h1>
+      <em>Let us know where you`ve been</em>
+  </div>
+  <!-- Links -->
+  <ul class="navbar-nav justify-content-center nav-justified w-100">
+    <li class="nav-item text-center">
+      <a class="nav-link" href="Lab05A(Gallery).html">Gallery</a>
+    </li>
+    <li class="nav-item text-center">
+      <a class="nav-link" href="#">Feeling Lucky</a>
+    </li>
+    <li class="nav-item text-center">
+      <a class="nav-link" href="#">User</a>
+    </li>
+  </ul>
+</nav>
+<div class="card">
+    <div class="card-body">
+      <h4 class="card-title">New York - Central Park</h4>
+      <form>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" placeholder="Give your photo a descriptive name">
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea class="form-control" rows="3" id="description" placeholder="Give your photo a descriptive name"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="sel1">Continent</label>
+      <select class="form-control" id="sel1">
+        <option>Choose continent</option>
+        <option>Choose continent</option>
+        <option>Choose continent</option>
+        <option>Choose continent</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="sel2">Contry</label>
+      <select class="form-control" id="sel2">
+        <option>Choose contry</option>
+        <option>Choose contry</option>
+        <option>Choose contry</option>
+        <option>Choose contry</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="city">City</label>
+      <input type="text" class="form-control" id="city" placeholder="Where did you take this photo">
+    </div>
+
+    <div class="form-group">
+      <label>Copyright?</label>
+      <div class="radio">
+      <label><input type="radio" name="optradio" checked>All rights reserved</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio">Creative commons</label>
+    </div>
+    </div>
+
+    <div class="form-group">
+      <label>Creat commons types</label>
+      <br />
+      <div class="form-check form-check-inline">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="">Attribution
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="">Noncommercial
+      </label>
+    </div>
+    <div class="form-check form-check-inline">
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="">No Derivative Works
+      </label>
+    </div>
+    </div>
+
+    <div class="form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox">I accept the software liscence
+      </label>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-sm-4 form-group">
+      <p>Rate this photo:</p>
+      <input type="number" name="points" min="1" max="10" class="w-100">
+      </div>
+      <div class="col-sm-8 form-group">
+      <p>Color Collection:</p>
+      <input type="color" name="color" min="1" max="10" class="w-100">
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-7 form-group">
+    <p>Date Taken</p>
+    <input type="date" name="date" class="w-100">
+    </div>
+    <div class="col-sm-5 form-group">
+    <p>Time Taken</p>
+    <input type="time" name="date" class="w-100">
+    </div>
+  </div>
+  <div class="btn-group">
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="reset" class="btn btn-primary">Clear</button>
+    </div>
+  </form>
+</div>
+</div>
+</div>
+</body>
+</html>

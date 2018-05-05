@@ -2,39 +2,39 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald);
 
 body {
-     background-color: white;   
+     background-color: white;
 }
 p, h1, h2, h3, ul, li {
     padding: 0;
-    margin: 0;    
+    margin: 0;
 }
 
 header {
     padding: 15px;
-    width: auto; 
+    width: auto;
     margin: 1em 5em 0em 5em;
-    background-color: #303F9F;   
+    background-color: #303F9F;
     color: white;
 }
-header h2 { 
-    font-family: 'Playfair Display', serif;    
+header h2 {
+    font-family: 'Playfair Display', serif;
     font-size: 14pt;
 }
 
 .hero {
     padding: 20px;
-    width: auto; 
+    width: auto;
     height: 8em;
     margin: 0em 5em 1em 5em;
-    background-color: white; 
+    background-color: white;
     color: #2C3E50;
     background-image: url(../images/map.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
-.hero h1 { 
-    font-family: 'Playfair Display', serif;    
+.hero h1 {
+    font-family: 'Playfair Display', serif;
     font-size: 28pt;
 }
 
@@ -44,7 +44,7 @@ header h2 {
     display : -ms-flexbox;
     display : flex;
 
-    width: auto; 
+    width: auto;
     margin: 1em 5em 1em 5em;
     background-color: white; /* #2C3E50; */
 
@@ -59,32 +59,32 @@ header h2 {
 .item {
     background-color: #5C6BC0;
     color: #ECF0F1;
-	margin:0; 
-	padding:12px; 
-	width:200px; 
+	margin:0;
+	padding:12px;
+	width:200px;
 	height:auto;
     font-family: 'Oswald', Arial, sans-serif;
 
-    
+
 }
 .item p {
-    width:100%; 
+    width:100%;
     font-size: 12pt;
 }
 
-.item h2 { 
-    font-family: 'Playfair Display', serif;    
+.item h2 {
+    font-family: 'Playfair Display', serif;
     font-size: 20pt;
 }
 
-.item h3 { 
-    font-family: 'Playfair Display', serif;    
+.item h3 {
+    font-family: 'Playfair Display', serif;
     font-size: 16pt;
     margin-top: 5px;
-}    
+}
 
 .item ul {
-     list-style-type: none;  
+     list-style-type: none;
     font-size: 12pt;
 
 }
@@ -95,14 +95,14 @@ header h2 {
     margin-top: 7px;
 }
 .photo {
-     margin: 3px;   
+     margin: 3px;
 }
 button {
     font-family: 'Oswald', Arial, sans-serif;
     background-color: #FF4081;
     color: white;
     padding: 0 7px 2px 7px;
-    margin-top: 7px;    
+    margin-top: 7px;
     width: 100%;
     height: 3em;
     border: none;

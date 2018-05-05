@@ -1,0 +1,135 @@
+*{font-family:sans-serif
+}
+body{margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+  background-color: #E8EAF6;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#section{padding: 0.5em;
+  background-color: white;
+}
+#A{word-spacing: 0.6em;
+  color: #00B0FF;
+}
+.title{font-size:1.5em;
+}
+.supp{font-style: italic;
+  font-family:serif;
+}
+#header{background-color: #1A237E;
+  color: white;
+  padding: 1em 1em 1em 1em;
+  font-weight: bold;
+}
+#nav{background-color: #3F51B5;
+  padding-top: 0.3em;
+  padding-left: 1em;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+.s{margin-left: 0.6em;
+  color:#00B0FF;
+}
+.s:link{padding: 0.3em;
+}
+.s:hover{
+background-color:#cc0000;
+color: white;
+cursor:pointer;
+}
+.sub-heading{background-color: #7986CB;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  font-weight: bold;
+  color: white;
+}
+.partone{margin-bottom: 0.5em;
+  border: 1px solid #C5CAE9;
+}
+.hh{background-color: #C5CAE9;
+  padding-top: 0.5em;
+  padding-left: 1em;
+  padding-bottom: 0.5em;
+  color: #7990A3;
+  font-style:italic;
+  font-family:serif;
+  margin-top: -4px;
+}
+#six{
+  padding-top: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+  font-weight: bold;
+  font-family:serif;
+}
+#seven{
+  margin-top: 1em;
+  direction: rtl;
+}
+#eight{background-color: #7986CB;
+  padding-left: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-weight: bold;
+  color: white;
+}
+#parttwo{
+    border: 1px solid #C5CAE9;
+    margin-bottom: 0.5em;
+}
+#partthree{
+    border: 1px solid #C5CAE9;
+}
+.gh{
+  font-size: 10pt;
+  color: #F5A2C1;
+}
+#nine{background-color: #7986CB;
+  padding-left: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-weight: bold;
+  color: white;
+}
+#mk{margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.ee{display: block;
+  margin-top:0.5em;
+  margin-bottom: 0.5em;
+  font-family:serif;
+}
+#M{border: 1px solid #C5CAE9;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+.o{font-style: italic;
+  color: #C5CAE9;
+}
+.q{
+  font-weight: bold;
+}
+p{padding-top: 0.5em;
+  padding-left: 1em;
+  padding-bottom: 0.5em
+}
+.b{vertical-align: top;
+}
+#footer{background-color: #1A237E;
+  margin-top: 0.5em;
+  padding-top: 1.3em;
+  padding-bottom: 1.3em;
+  padding-left: 1em;
+}
+#kl{
+  margin-top: 0.6em;
+  font-style: italic;
+  font-size: 10pt;
+  color: white;
+}
