@@ -1,0 +1,72 @@
+select{
+    width: 300px;
+}
+.table{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+input{
+    margin-top: 10px;
+}
+button{
+    margin: auto;
+    margin-top: 10px;
+    display: none;
+}
+.Attr{
+    margin-left: 4px;
+}
+#one{
+    display: none;
+}
+#two{
+    display: none;
+}
+#three{
+    display: none;
+}
+#four{
+    display: none;
+    color: red;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+#tableClass{
+    text-align: center;
+}
+td{
+    width: 60px;
+    margin-left: 5px;
+}
+table{
+    margin: auto;
+    text-align: center;
+}
+#attrNone{
+    display: none;
+    color: red;
+    font-weight: bold;
+    font-size: 0.5em;
+}
+#addNone{
+    display: none;
+    color: red;
+    font-weight: bold;
+    font-size: 0.5em;
+}
+tr:nth-child(2n+1){
+    background:white;
+}
+tr:nth-child(2n){
+    background:lightgray;
+}
+td{
+    padding: 0 0.5em;
+}
+tr:nth-child(1){
+    background-color: grey;
+    color: whitesmoke;
+    font-weight: bold;
+}
