@@ -20,9 +20,10 @@
     <!-- include header here -->
 
     <!-- Page Content -->
+    <?php include 'header.inc.php'; ?>
     <main class="container">
         <div class="row">
-    
+        <?php include 'left.inc.php'; ?>
         <!-- include left here -->          
     
             <div class="col-md-10">

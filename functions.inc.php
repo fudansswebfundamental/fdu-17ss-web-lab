@@ -1,5 +1,5 @@
 <?php
-
+include("travel-data.inc.php");
 function generateLink($url, $label, $class) {
    $link = '<a href="' . $url . '" class="' . $class . '">';
    $link .= $label;
@@ -7,9 +7,26 @@ function generateLink($url, $label, $class) {
    return $link;
 }
 
-
 function outputPostRow($number)  {
     include("travel-data.inc.php");
+    $element = '<div class="row"><div class="col-md-4">'.
+    generateLink("post.php?id=".$number, '<img src="images/'.${'thumb'.$number}.'" alt="'.${'title'.$number}.' class="img-responsive" />', null)
+    .'</div>
+    <div class="col-md-8">
+    <h2>'.${'title'.$number}.'</h2>
+    <div class="details">Posted by'.
+    generateLink("user.php?id=".${'userId'.$number}, ${'userName'.$number} , null)
+    .'<span class="pull-right">'.${'date'.$number}.'</span>
+    <p class="ratings">'
+    .constructRating(${'reviewsRating'.$number}).${'reviewsNum'.$number}.'Reviews</p>'
+    .'</div>
+    <p class="excerpt">'.${'excerpt'.$number}.'</p>
+    <p>'
+    .generateLink("post.php?id=".${'postId'.$number} , "Read more" , "btn btn-primary btn-sm")
+    .'</p>
+    </div>
+    </div>';
+    echo $element;
 }
 
 /*
