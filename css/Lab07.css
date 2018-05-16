@@ -10,6 +10,7 @@ input{
     margin-top: 10px;
 }
 button{
+    width: 300px;
     margin: auto;
     margin-top: 10px;
     display: none;
@@ -37,7 +38,7 @@ button{
     text-align: center;
 }
 td{
-    width: 60px;
+    min-width: 60px;
     margin-left: 5px;
 }
 table{
