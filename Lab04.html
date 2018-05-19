@@ -2,18 +2,99 @@
 <html lang="en">
 <head >
    <meta charset="utf-8">
-   <title>Lab 04</title>
+    <title>Lab 04</title>
    <link rel="stylesheet" href="./css/reset.css" />
    <link rel="stylesheet" href="./css/Lab04.css" />
 </head>
 <body>
 <header>
-     <h1>Share Your Travels</h1>
-     <p>let us know where you've been</p>
+    <h1>Share Your Travels</h1>
+    <p>let us know where you've been</p>
 </header>
 <main>
    <section>
-   
+       <form>
+           <fieldset>
+               <legend>photo details</legend>
+               <table>
+                   <tr>
+                       <td colspan="2">
+                           <label for="title">Title</label>
+                           <input id="title" placeholder="Give your photo a descriptive name" name="title">
+                           <label for="title1">Description</label>
+                           <textarea id="title1" placeholder="Adding a rich description will help with search result" name="title" rows="6"></textarea>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>
+                           <label for="Continent">Continent</label><br>
+                           <select id="Continent" style="margin-bottom:0.5em ">
+                               <option>Choose continent</option>
+                               <option>Choose continent1</option>
+                               <option>Choose continent2</option>
+                               <option>Choose continent3</option>
+                           </select><br>
+                           <label for="Country">Country</label><br>
+                           <select id="Country" style="margin-bottom:0.5em ">
+                               <option>Choose country</option>
+                               <option>Choose country1</option>
+                               <option>Choose country2</option>
+                           </select><br>
+                           <label for="City">City</label><br>
+                           <input id="City" name="city">
+                       </td>
+                       <td>
+                           <div class="box">
+                               <label>Copytights?</label><br>
+                               <label>
+                               <input type="radio" name="Copyright" value="All rights reserved">All rights reserved
+                               </label>
+                               <br>
+                               <label>
+                               <input checked type="radio" name="Copyright" value="Creative Commons">Creative Commons
+                               </label>
+                           </div>
+                           <div class="box">
+                               <label >Creat Commons Types</label><br>
+                               <input type="checkbox" name="Creative Commons Types" value="Attribution">Attribution<br>
+                               <input type="checkbox" name="Creative Commons Types" value="Noncommercial">Noncommercial<br>
+                               <input type="checkbox" name="Creative Commons Types" value="No Derivative Works">No Derivative Works<br>
+                           </div>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td colspan="2">
+                           <div class="rectangle">
+                           <label for="haha">I accept the software license<input id="haha" type="checkbox"></label>
+                           </div>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>
+                           <label for="Rate this photo">Rate this photo:</label><br>
+                           <input id="Rate this photo" type="number" style="width: 4em"><br>
+                           <label for="Color Collection">Color Collection</label><br>
+                           <input id="Color Collection" type="color" style="width: 4em"></td>
+                       <td>
+                           <div class="box">
+                               <label for="Date Taken">Date Taken:</label><br>
+                               <input id="Date Taken" type="date" style="width: 10em"><br>
+                               <label for="Time Taken">Time Taken:</label><br>
+                               <input id="Time Taken" type="time" style="width: 6em">
+                           </div>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td colspan="2">
+                           <div class="rectangle">
+                               <input class="rounded" type="submit" value="提交">
+                               <input class="rounded" type="reset" value="Clear Form">
+                           </div>
+                       </td>
+                   </tr>
+               </table>
+           </fieldset>
+       </form>
    </section>
 </main>  
 
