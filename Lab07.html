@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab07</title>
+    <link rel="stylesheet" href="Lab07.css">
+</head>
+<body>
+<!-- 第一个下拉框 -->
+<div>
+    <select id="select1">
+        <option>SELECT ONE</option>
+        <option>CREATE TABLE</option>
+        <option>ADD ROW</option>
+        <option>DELETE ROW</option>
+        <option>DELETE TABLE</option>
+    </select>
+    <div id="divTwoInputs">
+        <input type="text" id="inputTableName" placeholder="Table Name">
+        <input type="number" id="inputTableColumn" placeholder="Column Numbers">
+    </div>
+    <div id="divRows"></div>
+    <input type="button" id="btCommit" value="commit">
+</div>
+
+<div>
+    <select id="select2">
+        <option id="secondSelectOption0">SELECT (default: last created)</option>
+    </select>
+    <div id="divTable">
+        <!-- table 不删除，这样每个table的id就是独一无二的。 -->
+    </div><!-- 盛放具体的表格内容 -->
+</div>
+
+
+<script src="Lab07.js"></script>
+</body>
+</html>

@@ -3,6 +3,7 @@ const countries = [
     { name: "United States", continent: "North America", cities: ["Boston","Chicago","New York","Seattle","Washington"], photos: ["us1.jpg","us2.jpg"] },
     { name: "Italy", continent: "Europe", cities: ["Florence","Milan","Naples","Rome"], photos: ["italy1.jpg","italy2.jpg","italy3.jpg","italy4.jpg","italy5.jpg","italy6.jpg"] },
     { name: "Spain", continent: "Europe", cities: ["Almeria","Barcelona","Madrid"], photos: ["spain1.jpg","spain2.jpg"] }
+<<<<<<< HEAD
 ];
 
 const divTotal=document.getElementsByTagName("div");
@@ -85,3 +86,6 @@ button.innerHTML="visit";
 	divs[i].appendChild(divInner2);
 	divs[i].appendChild(button);
 }
+=======
+];
+>>>>>>> upstream/master

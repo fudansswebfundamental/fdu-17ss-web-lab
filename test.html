@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<input type="text" placeholder="input" id="input">
+
+<script>
+    var input = document.getElementById("input");
+    input.onblur = function(){
+        document.write((this.value > 0));
+    }
+</script>
+</body>
+</html>

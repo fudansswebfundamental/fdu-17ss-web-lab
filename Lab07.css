@@ -1,0 +1,40 @@
+body{
+    text-align: center;
+}
+
+select, #btCommit{
+    width: 300px;
+    padding:0 0.5em;
+    margin: 0.2em;
+}
+
+table{
+    margin: auto;
+}
+
+th{
+    color: whitesmoke;
+    background-color: grey;
+    margin: 2px;
+}
+
+td{
+    padding: 0 0.5em;
+}
+
+input{
+    margin: 1px;
+}
+
+#btCommit{
+    display: none;
+    cursor: pointer;
+}
+
+#inputTableName, #inputTableColumn{
+    display: none;
+}
+
+.odd{
+    background-color: lightgrey;
+}
