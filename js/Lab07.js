@@ -284,7 +284,7 @@ commitDeleteTable.onclick = function(){
 
     if (select2.selectedOptions[0].value !== "SELECT(default: last created)") {
         select2.options.remove(select2.selectedIndex);
-        tables.delete(select2.selectedOptions[0].value);// delete的真正用法？
+        delete tables[select2.selectedOptions[0].value];// delete的真正用法？
     }
     select2.options[select2.options.length-1].selected=true;
     let index = select2.selectedIndex;
