@@ -1,6 +1,3 @@
-//logic
-//新的三个bug
-
 
 //table对象的构造函数
 function Table(tableName){
@@ -17,9 +14,7 @@ function Table(tableName){
 //tables表示table们组成的数组
 let tables = [];
 
-
 //dom
-// THE FIRST PART
 let select1 = document.getElementById('select1');
 let select2 = document.getElementById('select2');
 
@@ -31,8 +26,8 @@ let input1= document.createElement('input');
 
 let tempo = document.createElement('div');
 
-let commitTable = document.createElement('input');
-let commitNewRow = document.createElement('input');
+
+
 let commitDeleteRow = document.createElement('input');
 let commitDeleteTable= document.createElement('input');
 
@@ -52,9 +47,6 @@ let addcols=[];
 
 //删除行数元素数组
 let deletecols=[];
-
-
-
 
 //选取项目栏1时
 select1.onchange = function() {
@@ -108,16 +100,9 @@ function createTable(){
 
 //创建新表格过程中，输入数字显示相同数目的属性栏
 input2.onchange = function showAttribute() {
-    //换行
-    // let br = document.createElement('br');
-    // br.innerHTML = "<br/>";
+    let commitTable = document.createElement('input');
+
     tempo.innerHTML='';
-    // let a = document.getElementsByName("inputAttr");
-    // for(let i = 0;i<a.length;i++){
-    //     a[i].innerHTML=null;
-    //     alert("success");
-    //
-    // }
 
     //显示属性栏
     attrNumber = this.value;
@@ -134,47 +119,45 @@ input2.onchange = function showAttribute() {
     attrs[attrs.length-1].onblur = function(){
         showCommit(commitTable);
     };
-        // //显示提交按钮
-        // commitTable.type = 'button';
-        // commitTable.value = 'commit';
-        // commitTable.style.width = '300px';
-        // part1.appendChild(commitTable);
+
+    commitTable.onclick = function(){
+
+        let tableName = input1.value;
+        let colNumber = input2.value;
+
+        table.innerHTML="";
+        let newOption = new Option(tableName);
+        newOption.selected = true;
+
+        select2.options.add(newOption);
+
+        let tr = document.createElement('tr');
+        table.appendChild(tr);
+
+        let attrThs = [];
+        let textTds = [];
+        for (let i = 0; i < colNumber; i++) {
+            attrThs[i] = document.createElement('th');
+            textTds[i] = document.createTextNode(attrs[i].value);
+            attrThs[i].appendChild(textTds[i]);
+            tr.appendChild(attrThs[i]);
+        }
+        tables.push(new Table(tableName));
+        tables[tables.length-1].colNumber=colNumber;
+        for (let i = 0; i < attrs.length; i++) {
+            tables[tables.length-1].ths[i] = attrs[i].value;
+        }
+        newOption.value = tables.length - 1 + "";
+    };
 };
 
 
 //每次提交（照道理）就创建了一个新表格（对象）
-commitTable.onclick = function(){
 
-    let tableName = input1.value;
-    let colNumber = input2.value;
-
-    table.innerHTML="";
-    let newOption = new Option(tableName);
-    newOption.selected = true;
-
-    select2.options.add(newOption);
-
-    let tr = document.createElement('tr');
-    table.appendChild(tr);
-
-    let attrThs = [];
-    let textTds = [];
-    for (let i = 0; i < colNumber; i++) {
-        attrThs[i] = document.createElement('th');
-        textTds[i] = document.createTextNode(attrs[i].value);
-        attrThs[i].appendChild(textTds[i]);
-        tr.appendChild(attrThs[i]);
-    }
-    tables.push(new Table(tableName));
-    tables[tables.length-1].colNumber=colNumber;
-    for (let i = 0; i < attrs.length; i++) {
-        tables[tables.length-1].ths[i] = attrs[i].value;
-    }
-    newOption.value = tables.length - 1 + "";
-};
 
 //为当前表格增加一行新属性对应值
 function addRow(){
+    let commitNewRow = document.createElement('input');
     //删除前面的
     part1.innerHTML=null;
     //换行
@@ -194,37 +177,30 @@ function addRow(){
     addcols[addcols.length-1].onblur = function(){
         showCommit(commitNewRow);
     };
-    // //显示提交按钮
-    // commitNewRow.type = 'button';
-    // commitNewRow.value = 'commit';
-    // commitNewRow.style.width='300px';
-    // part1.appendChild(commitNewRow);
+    //每次提交就创建了新的一行    deleteRow之后就无法增加新的一行？
+    commitNewRow.onclick = function(){
+        let currentCol=tables[select2.selectedOptions[0].value].colNumber;
+        let tr = document.createElement('tr');
+        table.appendChild(tr);
 
+        let attrTds = [];
+        let textTds = [];
+        let temp = select2.selectedOptions[0].value;
+        let temp2 = tables[temp].rowNumber;
+        for(let i = 0;i<currentCol;i++){
+            attrTds[i] = document.createElement('td');
+            textTds[i] = document.createTextNode(addcols[i].value);
+            tables[temp].trs[temp2][i]=addcols[i].value;//bug
+            attrTds[i].appendChild(textTds[i]);
+            tr.appendChild(attrTds[i]);
+        }
+        tables[select2.selectedOptions[0].value].rowNumber++;
 
-
+    };
 
 }
 
-//每次提交就创建了新的一行    deleteRow之后就无法增加新的一行？
-commitNewRow.onclick = function(){
-    let currentCol=tables[select2.selectedOptions[0].value].colNumber;
-    let tr = document.createElement('tr');
-    table.appendChild(tr);
 
-    let attrTds = [];
-    let textTds = [];
-    let temp = select2.selectedOptions[0].value;
-    let temp2 = tables[temp].rowNumber;
-    for(let i = 0;i<currentCol;i++){
-        attrTds[i] = document.createElement('td');
-        textTds[i] = document.createTextNode(addcols[i].value);
-        tables[temp].trs[temp2][i]=addcols[i].value;//bug
-        attrTds[i].appendChild(textTds[i]);
-        tr.appendChild(attrTds[i]);
-    }
-    tables[select2.selectedOptions[0].value].rowNumber++;
-
-};
 
 //当有一个input框为空时的适配？
 function deleteRow(){
@@ -289,33 +265,6 @@ commitDeleteRow.onclick = function(){
 
 
     }
-    // //当有元素为空时
-    // for(let j = 0;j<tables[select2.selectedOptions[0].value].rowNumber;j++){
-    //     loop:
-    //     for(let i = 0;i<currentCol;i++){
-    //         if(deletecols[i].value=""){
-    //             continue loop;
-    //         }else{
-    //             if(deletecols[i].value == tables[select2.selectedOptions[0].value].trs[j][i]){
-    //
-    //             }
-    //         }
-    //
-    //
-    //
-    //     }
-    // }
-
-
-
-
-
-
-
-
-
-
-
 };
 
 function deleteTable() {
@@ -335,7 +284,7 @@ commitDeleteTable.onclick = function(){
 
     if (select2.selectedOptions[0].value !== "SELECT(default: last created)") {
         select2.options.remove(select2.selectedIndex);
-        tables.splice(select2.selectedOptions[0].value,1);// delete的真正用法？
+        tables.delete(select2.selectedOptions[0].value);// delete的真正用法？
     }
     select2.options[select2.options.length-1].selected=true;
     let index = select2.selectedIndex;
@@ -348,7 +297,7 @@ commitDeleteTable.onclick = function(){
     let realthTexts=[];
     let realtrs=[];
 
-    for(let i = 0;i<tables[tableNum].rowNumber+1;i++){
+    for(let i = 0;tables[tableNum]!==undefined&&i<tables[tableNum].rowNumber+1;i++){
         realtrs[i] = document.createElement('tr');
         for(let j = 0;j<tables[tableNum].colNumber;j++) {
             if (i == 0) {
@@ -367,12 +316,7 @@ commitDeleteTable.onclick = function(){
         }
         table.appendChild(realtrs[i]);
     }
-
-
 };
-
-
-
 
 select2.onchange=function(){
     table.innerHTML="";
@@ -387,7 +331,7 @@ select2.onchange=function(){
     let realthTexts=[];
     let realtrs=[];
 
-    for(let i = 0;i<tables[tableNum].rowNumber+1;i++){
+    for(let i = 0;tables[tableNum]!==undefined&&i<tables[tableNum].rowNumber+1;i++){
         realtrs[i] = document.createElement('tr');
         for(let j = 0;j<tables[tableNum].colNumber;j++) {
             if (i == 0) {
@@ -418,7 +362,6 @@ select2.onchange=function(){
 
 
 };
-
 
 function showCommit(commit){
     //显示提交按钮
