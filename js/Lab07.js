@@ -64,7 +64,7 @@ function Table(colNum,name) {
     for(let i = 0 ; i < colNum ; i++){
         let td = document.createElement("td");
         if(attributes[i].value == ""){
-            td.innerText = "    ";
+            td.innerText = "Attribute" + (i+1);
         }else {
             td.innerText = attributes[i].value;
         }
