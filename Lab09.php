@@ -70,6 +70,7 @@ include 'travel-data.inc.php';
           /* hint: use array and loop */
           //the next lines are one of the elements
           //you need to fill the elements with data provided
+          //为啥我的那个
 
 
           foreach ($images as $value) {
