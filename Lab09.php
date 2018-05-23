@@ -37,13 +37,14 @@ include 'travel-data.inc.php';
         <div class="btn-group countryButtons" role="group" aria-label="...">
               <a role="button" class="btn btn-default" href="list.php">All</a>
            
-              <?php   
+              <?php
               /* you will need to fill this place with appropriate PHP */
               /* hint: use array and loop */
               //the next line is an example
-              //<a href="list.php?country=Canada" role="button" class="btn btn-default"> Canada</a> 
-
-
+              //<a href="list.php?country=Canada" role="button" class="btn btn-default"> Canada</a>
+              foreach ($countries as $value) {
+                  echo "<a href=\"list.php?country=".$value."\" role=\"button\" class=\"btn btn-default\"> ".$value."</a> ";
+              }
               ?>
                      
         </div>               
@@ -57,20 +58,22 @@ include 'travel-data.inc.php';
           /* hint: use array and loop */
           //the next lines are one of the elements
           //you need to fill the elements with data provided
+          foreach ($images as $value) {
+              echo "<li>
+                 <a href=\"detail.php?id=".$value['id']."\" class=\"img-responsive\">
+                 	<img src=\"images/square/".$value['path']."\" alt=\"".$value['title']."\">
+                 	<div class=\"caption\">
+                 		<div class=\"blur\">
+                 		</div>
+                 		<div class=\"caption-text\">
+                 			<h1>".$value['title']."</h1>
+                 		</div>
+                 	</div>
+                 </a>
+			 </li>";
+          }
 
 
-   //        <li>
-   //              <a href="detail.php?id=22" class="img-responsive">
-   //              	<img src="images/square/6114850721.jpg" alt="View of Cologne">
-   //              	<div class="caption">
-   //              		<div class="blur">
-   //              		</div>
-   //              		<div class="caption-text">
-   //              			<h1>View of Cologne</h1>
-   //              		</div>
-   //              	</div>
-   //              </a>
-			// </li>
           ?>
 
        </ul>       
