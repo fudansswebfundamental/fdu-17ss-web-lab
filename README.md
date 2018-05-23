@@ -4,7 +4,7 @@
 
 ## 当前 Lab
 
-- [Lab08](./requirements/Lab08.md)
+- [Lab09](./requirements/Lab09.md)
 
 ## 往期 Lab
 
@@ -14,5 +14,6 @@
 - [Lab05](https://www.bilibili.com/video/av21858680)
 - [Lab06](./requirements/Lab06.md)
 - [Lab07](./requirements/Lab07.md)
+- [Lab08](./requirements/Lab08.md)
 
 ---
