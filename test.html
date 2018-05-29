@@ -5,12 +5,36 @@
     <title>test</title>
 </head>
 <body>
-<input type="text" placeholder="input" id="input">
+<input type="text">
+<br>
+<input type="text">
+<br>
+<input type="text">
+<br>
+<input type="button" value="commit" id="commit">
+<input type="button" value="delete" id="delete">
+<div id="div"></div>
+
 
 <script>
-    var input = document.getElementById("input");
-    input.onblur = function(){
-        document.write((this.value > 0));
+    tableContent = [[]];
+    tableRanking = 0;
+    function aaa(){
+        let inputs = document.getElementsByTagName("input");
+        tableContent.push([]);
+        for(let i = 0; i < 3; i++){
+            tableContent[tableRanking].push(inputs[i].value);
+        }
+    }
+    document.getElementById("commit").onclick = function(){
+        aaa();
+        let div = document.getElementById("div");
+        for(let i = 0; i < 3; i++){
+            let input = document.createElement("input");
+            input.value = tableContent[tableRanking][i];
+            div.appendChild(input);
+        }
+        tableRanking++;
     }
 </script>
 </body>

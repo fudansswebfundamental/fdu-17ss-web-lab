@@ -1,7 +1,7 @@
-arrayTableName = new Array();
+arrayTableName = [];
 arrayTableName[0] = "SELECT (default: last created)";
-var arrayRowsNum = new Array();
-var arrayColumnNum = new Array();
+var arrayRowsNum = [];
+var arrayColumnNum = [];
 
 //btCommit出现
 function btCommitToShow(){
@@ -112,7 +112,7 @@ function addHeadSecondSelect(tableRanking){
 
     var tr = document.createElement("tr");
     tr.setAttribute("id", "table" + tableRanking + "firstTr");
-    var arrayTrs = new Array();
+    var arrayTrs = [];
 
     for(var i = 0; i < document.getElementById("div" + tableRanking).childNodes.length; i++){
         var th = document.createElement("th");
@@ -173,7 +173,7 @@ function addRowsSecondSelect(tableRanking){
 
 function deleteRowSecondSelect(tableRanking){
     var div = document.getElementById("div" + tableRanking);
-    var inputValueToSearch = new Array();
+    var inputValueToSearch = [];
     for(var i = 0; i < arrayColumnNum[tableRanking]; i++){
         //上面的select 的 input
         inputValueToSearch[i] = document.getElementById(tableRanking + "-1-" + i).value;
@@ -205,7 +205,6 @@ function deleteRowSecondSelect(tableRanking){
         }
     }
 }
-
 
 function option0(){//select one
     btCommitHidden();

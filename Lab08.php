@@ -44,8 +44,8 @@ include 'functions.inc.php';
                     <!-- replace each of these rows with a function call -->
                     <?php
                     outputPostRow(1); 
-                    //outputPostRow(2);
-                    //outputPostRow(3);
+                    outputPostRow(2);
+                    outputPostRow(3);
                     ?>
 
                 </div>  <!-- end post list -->
