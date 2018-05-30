@@ -118,24 +118,30 @@ function clearWarning() {
 function option0(){//select one
     clearWarning();
     btCommitHidden();
+    clearRows();
     twoInputsHidden();
-}function option1(){//create a table
+}
+function option1(){//create a table
     clearWarning();
     twoInputsToShow();
+    clearRows();
     inputColumnOnBlur();
-}function option2(currentTableRanking){//add row
+}
+function option2(currentTableRanking){//add row
     clearWarning();
     twoInputsHidden();
     btCommitHidden();
     clearRows();
     createRows(currentTableRanking);
-}function option3(){
+}
+function option3(){
     clearWarning();
     twoInputsHidden();
     btCommitHidden();
     clearRows();
     createDeleteRows();
-}function option4(){
+}
+function option4(){
     twoInputsHidden();
     btCommitToShow();
     clearRows();
@@ -147,7 +153,7 @@ function firstSelectEvents(){
     let select1 = document.getElementById("select1");
     let optionFirstSelect = select1.selectedIndex;//获取被选中的按钮0，请选择；1，选中；2，添加行；3，删除行；4，删除搜索得到的表格
     let currentTableRanking = document.getElementById("select2").selectedIndex - 1;//等于0就是默认值；
-    alert("currentTableRanking:" + currentTableRanking );
+    //alert("currentTableRanking:" + currentTableRanking );
     switch(optionFirstSelect){
         case 0://select one
             option0();
@@ -172,14 +178,15 @@ function firstSelectEvents(){
 ////////////////////////////////////对于第二个select的事件处理/////////////
 function secondSelectEvents(){
     let select2 = document.getElementById("select2");
-    let optionSecondSelect = select2.selectedIndex;//获取被选中的按钮0，请选择；1，选中；2，添加行；3，删除行；4，删除搜索得到的表格
+    let optionSecondSelect = select2.selectedIndex;//3
     clearSecondTableHead();//先把之前的给他整没了
+    //alert("我已经把之前的给整没了");
 
     if(optionSecondSelect === 0){
-        alert("选到0了，啥也不用干。");
+        //alert("选到默认了，啥也不用干。");
     }else{
-        let diJiGeBiaoGe = optionSecondSelect - 1;// 从[0,tableRanking);
-        alert("表格第"+diJiGeBiaoGe+"个");//第（optionSecondSelect-1）个table,0,1,2,3,4,5
+        let diJiGeBiaoGe = optionSecondSelect - 1;// 2
+        //alert("这是第" + optionSecondSelect +"个表格。\n" + "下标是" + diJiGeBiaoGe);
 
         let divTable = document.getElementById("divTable");
         let table = document.createElement("table");
@@ -188,14 +195,20 @@ function secondSelectEvents(){
         for(let j = 0; j < rowRanking; j++){
             let tr = document.createElement("tr");
             for(let i = 0; i < columnNumber[diJiGeBiaoGe]; i++){
-                let td = document.createElement("td");
-                td.innerText = tableContent[diJiGeBiaoGe][rowRanking][i];
-                if(rowRanking % 2 === 0){
-                    td.className = "odd";
+                if(j === 0){//这是表头
+                    let th = document.createElement("th");
+                    th.innerText = tableContent[diJiGeBiaoGe][0][i];
+                    tr.appendChild(th);
+                }else{//这是表元
+                    let td = document.createElement("td");
+                    td.innerText = tableContent[diJiGeBiaoGe][j][i];
+                    if(j % 2 === 0){
+                        td.className = "odd";
+                    }tr.appendChild(td);
                 }
-                tr.appendChild(td);
             }
             table.appendChild(tr);
+            //alert("table已经加了第" + j + "行。");
         }
         divTable.appendChild(table);
     }
@@ -216,10 +229,10 @@ function createSecondTableHead(){
     for(let i = 0; i < inputTableColumn.value; i++){
         let th = document.createElement("th");
         th.innerText = inputs[i+2].value;//第一个 input 是name，第二个是column，从第三个开始才是属性
-        ths.push(inputs[i+2].value);//将属性的名字介绍进去。
+        ths.push(inputs[i+2].value);//将属性的名字push进去。
         tr.appendChild(th);
     }
-    //alert("tableRanking:" + tableRanking);
+    ////alert("tableRanking:" + tableRanking);
     tableContent.push([]);
     tableContent[tableRanking].push([]);
     tableContent[tableRanking][0] = ths;//把表头push进
@@ -227,10 +240,10 @@ function createSecondTableHead(){
     table.appendChild(tr);
     divTable.appendChild(table);
     tableRanking++; //此时tableRanking等于1
-    //alert("rowRanking现在是：" + rowRanking);
+    ////alert("rowRanking现在是：" + rowRanking);
 }
 
-//清除第二个表下方的表头
+//清除第二个表下方的表头,divTable下面的所有东西。
 function clearSecondTableHead(){
     let divTable = document.getElementById("divTable");
     while(divTable.firstChild){
@@ -276,7 +289,7 @@ function searchAndDeleteRow(){
     let searchValuesTrue = [];
     for(let i = 0; i < columnNumber[tableRanking - 1]; i++){
         searchValues.push(divRows.childNodes[i].value);//这是输入的搜索值
-        alert("搜索值：" + divRows.childNodes[i].value);
+        //alert("搜索值：" + divRows.childNodes[i].value);
     }
 
     for(let i = 0; i < rowRanking; i++){//假设rowRanking=6，不包括表头
@@ -296,21 +309,21 @@ function searchAndDeleteRow(){
     }while(count < rowRanking);
 
     for(let i = rowRanking - 1; i >= 0; i--){//不包括表头
-        alert("searchValuesTrue["+ i +"] = " +searchValuesTrue[i]);
+        //alert("searchValuesTrue["+ i +"] = " +searchValuesTrue[i]);
     }
 
     for(let i = rowRanking - 1; i >= 0; i--){
         if(searchValuesTrue[i]){
             tableContent[tableRanking - 1].splice(i + 1, 1);//数组解决了
-            alert("我删除了第" + (i + 1) + "行。");
+            //alert("我删除了第" + (i + 1) + "行。");
             rowRanking--;
         }
-    }alert("现在这个表格有" + rowRanking + "行。")
+    }//alert("现在这个表格有" + rowRanking + "行。")
 }
 
 //删除第二个表格下面的table并展示出新的
 function deleteShowedRows(){
-    alert(rowRanking+"//////////////////////////////////////////////////////////////////////////");
+    //alert(rowRanking+"//////////////////////////////////////////////////////////////////////////");
     let divTable = document.getElementById("divTable");
     while(divTable.firstChild){
         divTable.removeChild(divTable.firstChild);
@@ -339,11 +352,11 @@ function deleteShowedRows(){
 function deleteTableOption(){
     let select2 = document.getElementById("select2");
     let tableToDelete = select2.selectedIndex;
-    alert("tableToDelete:"+tableToDelete);
-    alert("select2.children.length:"+select2.children.length);
+    //alert("tableToDelete:"+tableToDelete);
+    //alert("select2.children.length:"+select2.children.length);
     if(tableToDelete !== 0){
         select2.removeChild(select2.children[tableToDelete]);
-        alert("删掉了此option");
+        //alert("删掉了此option");
     }
 }
 //在第二个select下面
@@ -372,6 +385,7 @@ document.getElementById("btCommit").onclick = function(){
             break;
         case 4://delete table
             deleteTableOption();
+            secondSelectEvents();
             break;
         default://select one
             break;
@@ -398,14 +412,14 @@ document.getElementById("select2").onchange = function(){
 
 ////////////////////////////等待删除的debug环节
 
-document.getElementById("rowRankingTest").onclick = function(){
-    alert(rowRanking);
-};
-
-document.getElementById("tableRankingTest").onclick = function(){
-    alert(tableRanking);
-};
-
-document.getElementById("currentTableRankingTest").onclick = function(){
-    alert(document.getElementById("select2").selectedIndex);
-};
+// document.getElementById("rowRankingTest").onclick = function(){
+//     //alert(rowRanking);
+// };
+//
+// document.getElementById("tableRankingTest").onclick = function(){
+//     //alert(tableRanking);
+// };
+//
+// document.getElementById("currentTableRankingTest").onclick = function(){
+//     //alert(document.getElementById("select2").selectedIndex);
+// };
