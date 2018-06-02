@@ -4,6 +4,8 @@
 //****** Hint ******
 //connect database and fetch data here
 
+$mysqli = mysqli_connect('localhost','root','root');
+mysqli_select_db($mysqli,'travel');
 
 ?>
 
@@ -46,11 +48,12 @@
 
                 //****** Hint ******
                 //display the list of continents
-
-                while($row = $result->fetch_assoc()) {
-                  echo '<option value=' . $row['ContinentCode'] . '>' . $row['ContinentName'] . '</option>';
+                $sqlContinent = "select * FROM Continents";
+                $result = mysqli_query($mysqli,$sqlContinent);
+                    //$mysqli -> query($continent);
+                while($row = $result->fetch_assoc()){
+                    echo '<option value='.$row['ContinentCode'].">".$row["ContinentName"]."</option>";
                 }
-
                 ?>
               </select>     
               
@@ -60,7 +63,12 @@
                 //Fill this place
 
                 //****** Hint ******
-                /* display list of countries */ 
+                /* display list of countries */
+                $sqlCountry = "select * FROM Countries";
+                $result = mysqli_query($mysqli,$sqlCountry);
+                while($row = $result->fetch_assoc()){
+                    echo '<option value='.$row['ISO'].">".$row["CountryName"]."</option>";
+                }
                 ?>
               </select>    
               <input type="text"  placeholder="Search title" class="form-control" name=title>
@@ -73,7 +81,85 @@
                                     
 
 		<ul class="caption-style-2">
-            <?php 
+            <?php
+
+
+            $selectedCountry = $_GET['country'];
+            $selectedContinent = $_GET['continent'];
+
+            if($selectedContinent!=="0"&&$selectedCountry!=="0"){
+                findByCountry();
+                findByContinent();
+            }
+            if($selectedContinent!=="0"&&$selectedCountry==="0"){
+                findByContinent();
+            }
+            if($selectedContinent==="0"&&$selectedCountry!=="0"){
+                findByCountry();
+            }
+            if(($selectedCountry==="0"&&$selectedContinent==="0")||($selectedCountry===""&&$selectedContinent==="")){
+                show();
+            }
+
+//            echo $selectedContinent."</br>";
+//            echo $selectedCountry;
+
+
+
+function findByCountry(){
+    $sqlImageDetail = "select * FROM ImageDetails WHERE CountryCodeISO='".$GLOBALS['selectedCountry']."'";
+    $result = mysqli_query($GLOBALS['mysqli'],$sqlImageDetail);
+    selectedshow($result);
+}
+
+function findByContinent(){
+    $sqlImageDetail = "select * FROM ImageDetails WHERE ContinentCode='".$GLOBALS['selectedContinent']."'";
+    $result = mysqli_query($GLOBALS['mysqli'],$sqlImageDetail);
+    selectedshow($result);
+
+};
+
+
+
+            function selectedshow($result){
+                while ($row = $result->fetch_assoc()){
+                    echo '
+                <li>
+              <a href="detail.php?id='.$row['ImageID'].'" class="img-responsive">
+                <img src="images/square-medium/'.$row['Path'].'" alt="'.$row['Title'].'">
+                <div class="caption">
+                  <div class="blur"></div>
+                  <div class="caption-text">
+                    <p>'.$row['Description'].'</p>
+                  </div>
+                </div>
+              </a>
+            </li>       
+                ';
+                }
+            }
+
+            function show(){
+                $sqlImageDetail = "select * FROM ImageDetails";
+                $result = mysqli_query($GLOBALS['mysqli'],$sqlImageDetail);
+                while ($row = $result->fetch_assoc()){
+                    echo '
+                <li>
+              <a href="detail.php?id='.$row['ImageID'].'" class="img-responsive">
+                <img src="images/square-medium/'.$row['Path'].'" alt="'.$row['Title'].'">
+                <div class="caption">
+                  <div class="blur"></div>
+                  <div class="caption-text">
+                    <p>'.$row['Description'].'</p>
+                  </div>
+                </div>
+              </a>
+            </li>       
+                ';
+                }
+
+
+            }
             //Fill this place
 
             //****** Hint ******
