@@ -61,7 +61,7 @@ $conn = new mysqli($servername, $username, $password, travel);
               </select>     
               
               <select name="country" class="form-control">
-                <option value="0">Select Country</option>
+                <option value="0" selected>Select Country</option>
 
                 <?php 
                 //Fill this place
@@ -103,11 +103,17 @@ $conn = new mysqli($servername, $username, $password, travel);
               </a>
             </li>        
             */
-            $Continent = $_GET['continent'];
-            $Country = $_GET['country'];
+            $Continent = 0;
+            $Country = 0;
+            if (isset($_GET['continent'])){
+                $Continent = $_GET['continent'];
+            }
+            if(isset($_GET['country'])){
+                $Country = $_GET['country'];
+            }
 
-            if($Continent !== 0) {
-                $result = mysqli_query($conn, "SELECT * FROM imagedetails WHERE ContinentCode='$Continent'");
+            if($Country != "0" & $Continent != "0"){
+                $result = mysqli_query($conn, "SELECT * FROM imagedetails WHERE ContinentCode='$Continent' AND CountryCodeISO='$Country'");
                 while($row = mysqli_fetch_array($result)) {
                     echo "<li>
               <a href=\"detail.php?id=".$row['ImageID']."\" class=\"img-responsive\">
@@ -122,10 +128,11 @@ $conn = new mysqli($servername, $username, $password, travel);
             </li>";
                 }
             }
-            if($Country !== 0){
-                $result = mysqli_query($conn, "SELECT * FROM imagedetails WHERE CountryCodeISO='$Country'");
-                while($row = mysqli_fetch_array($result)) {
-                    echo "<li>
+            else{
+                if($Continent != "0" ) {
+                    $result = mysqli_query($conn, "SELECT * FROM imagedetails WHERE ContinentCode='$Continent'");
+                    while($row = mysqli_fetch_array($result)) {
+                        echo "<li>
               <a href=\"detail.php?id=".$row['ImageID']."\" class=\"img-responsive\">
                 <img src=\"images/square-medium/".$row['Path']."\" alt=\"".$row['Title']."\">
                 <div class=\"caption\">
@@ -136,12 +143,12 @@ $conn = new mysqli($servername, $username, $password, travel);
                 </div>
               </a>
             </li>";
+                    }
                 }
-            }
-            if($Country == "0" && $Continent == "0"){
-                $result = mysqli_query($conn, "SELECT * FROM imagedetails WHERE ImageID!='0'");
-                while($row = mysqli_fetch_array($result)) {
-                    echo "<li>
+                if($Country != "0" ){
+                    $result = mysqli_query($conn, "SELECT * FROM imagedetails WHERE CountryCodeISO='$Country'");
+                    while($row = mysqli_fetch_array($result)) {
+                        echo "<li>
               <a href=\"detail.php?id=".$row['ImageID']."\" class=\"img-responsive\">
                 <img src=\"images/square-medium/".$row['Path']."\" alt=\"".$row['Title']."\">
                 <div class=\"caption\">
@@ -152,6 +159,23 @@ $conn = new mysqli($servername, $username, $password, travel);
                 </div>
               </a>
             </li>";
+                    }
+                }
+                if($Country == "0" && $Continent == "0"){
+                    $result = mysqli_query($conn, "SELECT * FROM imagedetails WHERE ImageID!='0'");
+                    while($row = mysqli_fetch_array($result)) {
+                        echo "<li>
+              <a href=\"detail.php?id=".$row['ImageID']."\" class=\"img-responsive\">
+                <img src=\"images/square-medium/".$row['Path']."\" alt=\"".$row['Title']."\">
+                <div class=\"caption\">
+                  <div class=\"blur\"></div>
+                  <div class=\"caption-text\">
+                    <p>".$row['Description']."</p>
+                  </div>
+                </div>
+              </a>
+            </li>";
+                    }
                 }
             }
             ?>
