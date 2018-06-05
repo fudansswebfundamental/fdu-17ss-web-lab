@@ -120,11 +120,8 @@ document.getElementById("edit_lyric").onmouseleave = function () {
 };
 
 // 获取所在行的初始位置。
-function get_target_pos() {
-    return get_target_pos(edit_lyric_pos);
-}
-
 function get_target_pos(n_pos) {
+    if (n_pos === undefined) n_pos = edit_lyric_pos;
     let value = document.getElementById("edit_lyric").value; 
     let pos = 0;
     for (let i = n_pos; i >= 0; i--) {
