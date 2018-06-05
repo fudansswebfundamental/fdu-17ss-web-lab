@@ -1,6 +1,10 @@
 <?php
 //Fill this place
-
+    $db = new mysqli("localhost","root","","travel");
+    if(mysqli_connect_errno()){
+        echo '<p>Error:failed to connect the database</p>';
+        exit;
+    }
 //****** Hint ******
 //connect database and fetch data here
 
@@ -43,7 +47,8 @@
                 <option value="0">Select Continent</option>
                 <?php
                 //Fill this place
-
+                $sql = "SELECT ContinentCode,ContinentName FROM Continents";
+                $result = $db->query($sql);
                 //****** Hint ******
                 //display the list of continents
 
@@ -52,13 +57,17 @@
                 }
 
                 ?>
-              </select>     
+              </select>
               
               <select name="country" class="form-control">
                 <option value="0">Select Country</option>
-                <?php 
+                <?php
                 //Fill this place
-
+                $sql = "SELECT ISO,CountryName FROM Countries";
+                $result = $db->query($sql);
+                while($row = $result->fetch_assoc()){
+                    echo '<option value='. $row['ISO'].'>'.$row['CountryName'].'</option>';
+                }
                 //****** Hint ******
                 /* display list of countries */ 
                 ?>
@@ -75,7 +84,34 @@
 		<ul class="caption-style-2">
             <?php 
             //Fill this place
-
+            include 'lab10_function.inc.php';
+            if(isset($_GET['continent']) && isset($_GET['country'])){
+                $continent = $_GET['continent'];
+                $country = $_GET['country'];
+                $sql = findByContinentAndCountry($country,$continent);
+            }elseif(isset($_GET['continent'])){
+                $continent = $_GET['continent'];
+                $sql = findByContinent($continent);
+            }elseif(isset($_GET['country'])){
+                $country = $_GET['country'];
+                $sql = findByCountry($country);
+            }else{
+                $sql = findByContinentAndCountry(0,0);
+            }
+            $result = $db->query($sql);
+            while ($row = $result->fetch_assoc()){
+                echo '<li>
+              <a href="detail.php?id='.$row['ImageID'].'" class="img-responsive">
+                <img src="images/square-medium/'.$row['Path'].'" alt="'.$row['Title'].'">
+                <div class="caption">
+                  <div class="blur"></div>
+                  <div class="caption-text">
+                    <p>'.$row['Description'].'</p>
+                  </div>
+                </div>
+              </a>
+            </li> ';
+            }
             //****** Hint ******
             /* use while loop to display images that meet requirements ... sample below ... replace ???? with field data
             <li>

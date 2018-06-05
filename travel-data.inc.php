@@ -20,7 +20,7 @@
   $reviewsRating2 = 5;  
 
   $postId3 = 9;
-  $userId3 = 13;。
+  $userId3 = 13;
   $userName3 = "Edward Francis";
   $date3 = "10/19/2017";
   $thumb3 = "8710289254.jpg";
