@@ -1,5 +1,6 @@
 /* css image captions adapted from hasinhayder.github.io */
 
+
 	.caption-style-2{
 		list-style-type: none;
 		margin: 0px;
@@ -63,6 +64,6 @@
 		position: absolute;
 		width: 225px;
 		height: 225px;
-		text-align: center;
-		top:20px;
+		text-align: left;
+		top:0;
 	}
