@@ -58,7 +58,6 @@ $con = mysqli_connect("localhost",'root','','travel');
                 <option value="0">Select Country</option>
                 <?php 
                 //Fill this place
-                //连接到数据库
                 $sal= 'SELECT ISO,CountryName From Countries ';
                 $result = mysqli_query($con, $sal);
                 //****** Hint ******
