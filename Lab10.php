@@ -9,7 +9,10 @@ $username = "root";
 $password = "";
 
 $conn = new mysqli($servername, $username, $password, travel);
-
+if ($conn->connect_error) {
+    die("连接失败: " . $conn->connect_error);
+}
+echo "连接成功";
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +57,7 @@ $conn = new mysqli($servername, $username, $password, travel);
                 $sql = "SELECT ContinentCode, ContinentName FROM continents";
                 $result = $conn->query($sql);
                 while($row = $result->fetch_assoc()) {
-                  echo '<option value=' . $row['ContinentCode'] . '>' . $row['ContinentName'] . '</option>';
+                    echo '<option value=' . $row['ContinentCode'] . '>' . $row['ContinentName'] . '</option>';
                 }
 
                 ?>
