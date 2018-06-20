@@ -1,5 +1,5 @@
-<?php error_reporting(0); ?>
-<?php
+<?php error_reporting(0);
+
 $name = $_FILES["file_upload"]["name"];
 $lrc = $_POST["edit_lyric"];
 if (!file_exists("upload")){
