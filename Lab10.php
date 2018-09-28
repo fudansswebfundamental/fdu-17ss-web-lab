@@ -3,7 +3,7 @@
 
 //****** Hint ******
 //connect database and fetch data here
-
+$con = mysqli_connect("localhost",'root','','travel');
 
 ?>
 
@@ -43,10 +43,10 @@
                 <option value="0">Select Continent</option>
                 <?php
                 //Fill this place
-
+                $sal= 'SELECT ContinentCode,ContinentName From Continents ';
+                $result = mysqli_query($con, 'SELECT ContinentCode,ContinentName From Continents ');
                 //****** Hint ******
                 //display the list of continents
-
                 while($row = $result->fetch_assoc()) {
                   echo '<option value=' . $row['ContinentCode'] . '>' . $row['ContinentName'] . '</option>';
                 }
@@ -58,9 +58,13 @@
                 <option value="0">Select Country</option>
                 <?php 
                 //Fill this place
-
+                $sal= 'SELECT ISO,CountryName From Countries ';
+                $result = mysqli_query($con, $sal);
                 //****** Hint ******
-                /* display list of countries */ 
+                /* display list of countries */
+                while($row = $result->fetch_assoc()) {
+                    echo '<option value=' . $row['ISO'] . '>' . $row['CountryName'] . '</option>';
+                }
                 ?>
               </select>    
               <input type="text"  placeholder="Search title" class="form-control" name=title>
@@ -74,8 +78,32 @@
 
 		<ul class="caption-style-2">
             <?php 
-            //Fill this place
-
+            //Fill this place\
+            $result = mysqli_query($con,'SELECT ImageID, Title, Description, CountryCodeISO, ContinentCode, Path FROM ImageDetails');
+            while($row = $result->fetch_assoc()) {
+                $INPUT= '<li>
+                      <a href="detail.php?id='. $row["ImageID"] .'"class="img-responsive">
+                        <img src="images/square-medium/'.$row["Path"].'" alt="'.$row["Description"].'">
+                        <div class="caption">
+                          <div class="blur"></div>
+                          <div class="caption-text">
+                            <p>'.$row["Title"].'</p>
+                          </div>
+                        </div>
+                      </a>
+                    </li>';
+                if(isset($_GET["country"]) && $_GET["country"] != "0"){
+                    if($row["CountryCodeISO"] === $_GET["country"]){
+                        echo $INPUT;
+                    }
+                }else if(isset($_GET["continent"]) && $_GET["continent"] != "0"){
+                    if($row["ContinentCode"] === $_GET["continent"]){
+                        echo $INPUT;
+                    }
+                }else{
+                    echo $INPUT;
+                }
+            }
             //****** Hint ******
             /* use while loop to display images that meet requirements ... sample below ... replace ???? with field data
             <li>

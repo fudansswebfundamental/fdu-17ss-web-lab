@@ -27,7 +27,7 @@ include 'travel-data.inc.php';
 
 <body>
     <?php include 'header.inc.php'; ?>
-    
+
 
 
     <!-- Page Content -->
@@ -37,13 +37,17 @@ include 'travel-data.inc.php';
         <div class="btn-group countryButtons" role="group" aria-label="...">
               <a role="button" class="btn btn-default" href="list.php">All</a>
            
-              <?php   
+              <?php
+              include 'travel-data.inc.php';
+              asort($countries);
+              foreach ($countries as $x=>$x_value){
+                  $thetitle ='<a href="list.php?country='.$x_value.'" role="button" class="btn btn-default">'.$x_value.'</a>';
+                  echo $thetitle;
+              }
               /* you will need to fill this place with appropriate PHP */
               /* hint: use array and loop */
               //the next line is an example
-              //<a href="list.php?country=Canada" role="button" class="btn btn-default"> Canada</a> 
-
-
+              //<a href="list.php?country=Canada" role="button" class="btn btn-default"> Canada</a>
               ?>
                      
         </div>               
@@ -52,25 +56,33 @@ include 'travel-data.inc.php';
 
 		<ul class="caption-style-2">
          
-          <?php   
+          <?php
+          include 'travel-data.inc.php';
+          $id = "id";
+          $path = "path";
+          $title = "title";
+          foreach ($images as $x=>$x_value){
+              $img = '<li><a href="detail.php?id='.$x_value[$id].'" class="img-responsive"><img src="images/square/'.$x_value[$path].'" alt="'.$x_value[$title].'"><div class="caption"><div class="blur"></div><div class="caption-text"><h1>'.$x_value[$title].'</h1></div></div></a></li>';
+              echo $img;
+          }
           /* you will need to fill this place with appropriate PHP */ 
           /* hint: use array and loop */
           //the next lines are one of the elements
           //you need to fill the elements with data provided
 
 
-   //        <li>
-   //              <a href="detail.php?id=22" class="img-responsive">
-   //              	<img src="images/square/6114850721.jpg" alt="View of Cologne">
-   //              	<div class="caption">
-   //              		<div class="blur">
-   //              		</div>
-   //              		<div class="caption-text">
-   //              			<h1>View of Cologne</h1>
-   //              		</div>
-   //              	</div>
-   //              </a>
-			// </li>
+//           <li>
+//                 <a href="detail.php?id=22" class="img-responsive">
+//                 	<img src="images/square/6114850721.jpg" alt="View of Cologne">
+//                 	<div class="caption">
+//                 		<div class="blur">
+//                 		</div>
+//                 		<div class="caption-text">
+//                 			<h1>View of Cologne</h1>
+//                 		</div>
+//                 	</div>
+//                 </a>
+//			 </li>
           ?>
 
        </ul>       
