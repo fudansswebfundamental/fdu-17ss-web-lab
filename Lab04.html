@@ -1,22 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head >
+<head>
    <meta charset="utf-8">
    <title>Lab 04</title>
-   <link rel="stylesheet" href="./css/reset.css" />
-   <link rel="stylesheet" href="./css/Lab04.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
 </head>
 <body>
-<header>
-     <h1>Share Your Travels</h1>
-     <p>let us know where you've been</p>
-</header>
-<main>
-   <section>
-   
-   </section>
-</main>  
+<div class="container">
+    <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <h1 class="text-center">Share Your Travels</h1>
+                    <h6 class="text-center font-italic">Let us know where you've been</h6>
+                </div>
+                <nav class="navbar col-md-6">
+                    <div class="col-md-4 text-center">
+                        <a href="Lab02.html" class="list-group-item-action">Gallery</a>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="#" class="list-group-item-action">Feeling Lucky</a>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="#" class="list-group-item-action">User</a>
+                    </div>
+                </nav>
+            </div>
+    </div>
 
+    <div class="container">
+        <div class="card">
+            <section class="card-body">
+                <form method="post" action="http://www.randyconnolly.com/tests/process.php">
+                    <fieldset>
+                        <h4>Photo Details</h4>
+                        <h6>Title</h6>
+                        <input type="text" class="form-control" name="title" placeholder="Give your photo a descriptive name"><br>
+                        <h6>Description</h6>
+                        <textarea class="form-control" placeholder="Adding a rich description will help with search results"></textarea><br>
+                        <h6>Continent</h6>
+                        <select title="" name="continent" class="form-control">
+                            <option class="disabled">Choose continent</option>
+                        </select><br>
+                        <h6>Country</h6>
+                        <select title="" name="country" class="form-control">
+                            <option>Choose country</option>
+                        </select><br>
+                        <h6>City</h6>
+                        <input title="" type="text" name="city" class="form-control"><br>
+                        <div class="box">
+                            <h6>Copyright?</h6>
+                            <input title="" type="radio" name="right">All rights reserved<br>
+                            <input title="" type="radio" name="right" checked>Creative Commons
+                        </div><br>
+                        <div class="box">
+                            <h6>Creative Common Types</h6>
+                            <input title="" type="checkbox" name="checkbox1" value="Attribution">Attribution
+                            <input title="" type="checkbox" name="checkbox2" value="Noncommercial">Noncommercial
+                            <input title="" type="checkbox" name="checkbox3" value="No Derivative Works">No Derivative Works
+                        </div><br>
+                        <div class="rectangle">
+                            <input title="" type="checkbox">I accept the software license
+                        </div><br>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <h6>Rate this photo:</h6>
+                                <input title="" type="number" class="form-control">
+                            </div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-8">
+                                <h6>Color Collection:</h6>
+                                <input title="" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h6>Date Taken:</h6>
+                                <input title="" type="text" class="form-control">
+                            </div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-6">
+                                <h6>Time Taken:</h6>
+                                <input title="" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="btn-group">
+                            <input type="submit" class="btn btn-secondary" value="Submit">
+                            <input type="reset" class="btn btn-secondary" value="Clear">
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+    </div>
 
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.5/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+</div>
 </body>
 </html>

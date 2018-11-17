@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab07</title>
+    <link rel="stylesheet" href="css/Lab07.css">
+</head>
+<body>
+    <div class="box selectBox" id="selectBox1">
+        <select title="" name="default" id="select1">
+            <option selected value="SELECT ONE" id="option1">
+                SELECT ONE
+            </option>
+            <option value="CREATE TABLE" id="option2">
+                CREATE TABLE
+            </option>
+            <option value="ADD ROW" id="option3">
+                ADD ROW
+            </option>
+            <option value="DELETE ROW" id="option4">
+                DELETE ROW
+            </option>
+            <option value="DELETE TABLE" id="option5">
+                DELETE TABLE
+            </option>
+        </select>
+    </div>
+
+    <div class="box" id="createTableBox">
+        <input title="" type="text" id="tableName" placeholder="Table Name">
+        <input title="" type="number" id="colNum" placeholder="max10" max = "10">
+    </div>
+
+    <div class="box" id="addRowBox">
+
+    </div>
+    <div class="box" id="deleteRowBox">
+
+    </div>
+    <div class="box" id="attributeBox">
+
+    </div>
+
+    <div class="box" id="btCommitBox">
+        <button value="commit" id="btCommit">Commit</button>
+    </div>
+    <div class="box" id="warningBox">
+        <p>WARNING: You cannot undo this action!</p>
+    </div>
+    <div class="box selectBox" id="selectBox2">
+        <select title="" id="select2">
+            <option selected>
+                SELECT (default: last created)
+            </option>
+        </select>
+    </div>
+    <div class="box" id="tableBox">
+
+    </div>
+
+<script type="text/javascript" src="js/Lab07.js" title="default"></script>
+</body>
+</html>
